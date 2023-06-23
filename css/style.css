@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --mainTextColor: #fff;
+    --bila-neuplna: #ffffff60;
+    --secondaryTextColor: #000;
+    --cerna-neuplna: #00000060;
+}
+
+body {
+    background-color: #5e7952;
+    text-align: center;
+    color: var(--mainTextColor);
+    font-size: 16px;
+    font-family: "Courier New";
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top center;
+
+    padding-bottom: 4.5em;
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    cursor: pointer;
+}
+
+h2 {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+#hlavni-str,
+#kategorie-str,
+#hra-str,
+#nastaveni-str {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#nadpis {
+    margin-top: 1em;
+}
+
+#foot {
+    position: fixed;
+    height: 4em;
+    bottom: 0;
+    padding-bottom: 5em;
+    width: 100%;
+    z-index: 0;
+    backdrop-filter: blur(1.5px);
+}
+
+#mezera {
+    width: 100%;
+    height: 15vh;
+}
+
+#made-by {
+    margin-top: 2em;
+    font-weight: bolder;
+}
+
+#tlacitko {
+    box-shadow: 0px 0px 18px 0px var(--cerna-neuplna);
+    background-color: var(--bila-neuplna);
+    border-radius: 28px;
+    border: 0px;
+    display: inline-block;
+    color: var(--secondaryTextColor);
+    font-family: "Courier New";
+    font-size: 1.05em;
+    font-weight: bold;
+    padding: 1em 1.9em;
+    text-decoration: none;
+    margin: 1.25em;
+    z-index: 2;
+}
+
+#tlacitko:hover {
+    background-color: var(--mainTextColor);
+}
+
+#tlacitko:active {
+    position: relative;
+    top: 1px;
+}
+
+#textInfo {
+    padding-left: 8em;
+    padding-right: 8em;
+    margin-bottom: 0.4em;
+}
+
+#tlacitko-inp {
+    text-transform: uppercase;
+    color: var(--secondaryTextColor);
+    background-color: var(--bila-neuplna);
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    margin-left: 0.5em;
+    margin-bottom: 2em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+}
+
+#tlacitko-inp:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+
+#tlacitkoBack {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px 18px 0px var(--cerna-neuplna);
+    background-color: var(--bila-neuplna);
+    border-radius: 28px;
+    border: 0px;
+    display: inline-block;
+    color: var(--secondaryTextColor);
+    font-family: "Courier New";
+    font-size: 1.05em;
+    font-weight: bold;
+    padding: 1em 1.9em;
+    text-decoration: none;
+    margin-top: 3vh;
+    margin-left: 3vw;
+    z-index: 2;
+}
+
+#tlacitkoBack:hover {
+    background-color: var(--mainTextColor);
+}
+
+#nadpisHL {
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+}
+
+#nadpis {
+    margin-top: 12vh;
+    margin-bottom: 10vh;
+}
+
+#policka {
+    margin-bottom: 7vh;
+}
+
+.policko {
+    display: inline-block;
+    width: 2.5em;
+    height: 2.5em;
+    border: none;
+    border-bottom: 0.3em solid var(--mainTextColor);
+    margin-right: 5px;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--secondaryTextColor);
+    background-color: var(--bila-neuplna);
+    cursor: default;
+}
+
+.policko:focus {
+    outline: none;
+}
+
+.mezera {
+    background-color: #00000000;
+    border-bottom: none;
+}
+
+#pouzite {
+    margin-bottom: 7vh;
+}
+
+#profil {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 3vh;
+    margin-right: 3vw;
+    padding: 15px;
+    background-color: var(--bila-neuplna);
+    backdrop-filter: blur(2px);
+    border-radius: 50px;
+}
+
+#my-canvas {
+    border: dashed 5px var(--mainTextColor);
+    width: 21.8em;
+    height: 15.6em;
+}
+
+#ctx {
+    stroke: var(--mainTextColor);
+}
+
+#obrazek {
+    border-radius: 50px;
+}
+
+#klavesnice {
+    margin: 0px 15vw 7vh 15vw;
+}
+
+#Klklavesa {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    border: none;
+    border-bottom: 0.3em solid var(--secondaryTextColor);
+    margin-right: 3px;
+    margin-top: 3px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--secondaryTextColor);
+    background-color: var(--bila-neuplna);
+}
+
+#akaalert {
+    display: block;
+    z-index: 5;
+    background-color: var(--secondaryTextColor);
+    color: var(--mainTextColor);
+    border: 7px double var(--mainTextColor);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#akaalert:empty {
+    display: none;
+    border: none;
+}
+
+#akaalert p {
+    margin: 20px 50px 0px 50px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#akaalert button {
+    margin: 20px 50px;
+    padding: 7px 10px;
+    font-size: large;
+    font-family: "Courier New";
+    font-weight: bold;
+    background-color: var(--mainTextColor);
+    color: var(--secondaryTextColor);
+    border: 0px;
+}
+
+#input-barvaText,
+#input-barvaPoz,
+#input-vlastni {
+    background: var(--bila-neuplna);
+    width: 5em;
+    height: 1.8em;
+    border: 0;
+    outline: none;
+    margin-right: 0.5em;
+}
+
+#kolecko1 {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    margin: 1em;
+    border-radius: 50%;
+    border: 0.5em solid #5e7952;
+    background-color: white;
+    cursor: pointer;
+}
+
+#kolecko5 {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    margin: 1em;
+    border-radius: 50%;
+    border: 0.5em solid rgb(201, 197, 197);
+    background-color: rgb(38, 87, 110);
+    cursor: pointer;
+}
+
+#kolecko3 {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    margin: 1em;
+    border-radius: 50%;
+    border: 0.5em solid #B68681;
+    background-color: #000;
+    cursor: pointer;
+}
+
+#kolecko4 {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    margin: 1em;
+    border-radius: 50%;
+    border: 0.5em solid #713E75;
+    background-color: rgb(255, 209, 227);
+    cursor: pointer;
+}
+
+#kolecko2 {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    margin: 1em;
+    border-radius: 50%;
+    border: 0.5em solid black;
+    background-color: white;
+    cursor: pointer;
+}
+
+#on-off {
+    text-transform: uppercase;
+    color: var(--secondaryTextColor);
+    background-color: var(--bila-neuplna);
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    margin-left: 0.5em;
+    margin-bottom: 2em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+}
+
+#on-off:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+
+#obrazky {
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+#obrazky:hover {
+    transform: scale(2);
+}
+
+@media screen and (max-width: 930px) {
+    #profil {
+        position: static;
+        margin: 3vh 0;
+        padding: 15px;
+        background-color: var(--bila-neuplna);
+        backdrop-filter: blur(2px);
+        border-radius: 50px;
+    }
+
+    #textInfo {
+        padding-left: 3em;
+        padding-right: 3em;
+        margin-bottom: 0.4em;
+    }
+}
